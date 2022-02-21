@@ -1,0 +1,120 @@
+.form-login {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 3rem;
+
+	button {
+		display: block;
+		margin: auto;
+		margin-top: 1.5rem;
+	}
+
+	.input--login {
+		width: 150%;
+	}
+
+	input {
+		margin: 35px 0 5px 0;
+		width: 100%;
+		display: inline-block;
+		border: none;
+		height: 3rem;
+		transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+		background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 97%, $color-3 4%);
+		&:focus,
+		&:valid {
+			box-shadow: none;
+			outline: none;
+			background-position: 0 0;
+			&::placeholder {
+				color: $color-2;
+				font-size: 0.9rem;
+				transform: translateY(-13px);
+				visibility: visible !important;
+			}
+		}
+		&:focus {
+			box-shadow: 0 2px 5px -2px gray;
+		}
+	}
+
+	.input-file {
+		
+		&:focus {
+			box-shadow: none;
+		}
+		&::before {
+			content: "Photo de profil";
+		}
+	}
+}
+
+.errorInput {
+	color: $danger;
+	font-size: 0.7rem;
+}
+
+.form-post {
+	.input-text,
+	.input-youtube {
+		width: 100%;
+		border-radius: 10px;
+		&:focus {
+			box-shadow: none;
+			outline: none;
+			background-position: 0 0;
+			border: darken($color: $color-3, $amount: 10) solid 2.5px;
+			&::placeholder {
+				font-size: 0rem;
+			}
+		}
+	}
+
+	.input-text {
+		border: $color-2 solid 2px;
+		&::placeholder {
+			color: $color-2;
+			font-size: 16px;
+		}
+	}
+
+	.input-file {
+
+		&::before {
+			content: "Sélectionner une photo";
+		}
+	}
+
+	button {
+		display: block;
+	}
+}
+
+.input-file {
+	&::-webkit-file-upload-button {
+		visibility: hidden;
+		display: none;
+	}
+	&::before {
+		content: "Sélectionner une photo";
+		display: inline-block;
+		background: rgb(238, 238, 238);
+		border: 1px solid rgb(250, 250, 250);
+		border-radius: 20px;
+		padding: 5px 8px;
+		outline: none;
+		white-space: nowrap;
+		user-select: none;
+		font-size: 0.95rem;
+		margin-right: 10px;
+	}
+	&:hover::before {
+		border-color: rgb(235, 235, 235);
+		background: darken($color: rgb(238, 238, 238), $amount: 5) !important;
+	}
+	&:active::before {
+		background: darken($color: rgb(238, 238, 238), $amount: 25) !important;
+	}
+
+}

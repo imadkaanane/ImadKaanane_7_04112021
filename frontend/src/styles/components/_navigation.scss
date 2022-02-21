@@ -1,0 +1,58 @@
+.header {
+	background-color: $color-2;
+
+	.navbar-brand {
+		background-color: $color-2;
+		margin-left: 10px;
+		position: relative;
+		height: 30px;
+		width: 30px;
+
+		&:focus,
+		&:active {
+			outline: none;
+			border: none;
+		}
+        @media (max-width: 450px) {
+            height: 26px;
+		    width: 26px;
+        }
+
+        
+		&__logo {
+			position: absolute;
+			top: 0;
+			height: 30px;
+			
+			&:hover,
+			&:focus,
+			&:active &:active{
+				outline: none;
+				box-shadow: 0 0 4px 1px rgb(90, 90, 90);
+				
+			}
+            @media (max-width: 450px) {
+                height: 26px;
+            }
+            @media (max-width: 350px) {
+                height: 25px;
+            }
+		}
+	}
+
+	.nav-link{
+		font-size: 1.7rem;
+		color: white;
+		outline: none;
+        &:active,
+        &:hover,
+		&:focus {
+			color: $color-3;
+		}
+        @media (max-width: 450px) {
+            font-size: 1.1rem;
+        }
+
+	}
+
+}

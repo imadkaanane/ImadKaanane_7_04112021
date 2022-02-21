@@ -1,0 +1,89 @@
+button {
+	border: none;
+	outline: none;
+}
+
+.btn,
+.btn-sm {
+	border-radius: 20px;
+	text-align: center;
+}
+
+.btn {
+	color: white;
+	text-shadow: 0 0 1px rgb(48, 48, 48);
+	
+	&--success {
+		background-color: $color-2;
+		color: white;
+		border-radius: 20px;
+        border: darken($color: $color-2, $amount: 2) solid 2px;
+		&:hover {
+			background-color: darken($color: $color-2, $amount: 5) !important;
+			box-shadow: 0 0px 0px 1px rgba(218, 217, 217, 0.2);
+			color: white;
+		}
+
+	}
+
+	&--comments {
+		color: $color-5;
+	}
+
+	&--trash {
+		svg {
+			font-size: 1rem;
+		}
+		svg path {
+			fill: rgb(141, 141, 141);
+		}
+
+		&:hover {
+			svg path {
+				fill: $danger;
+			}
+		}
+	}
+
+	&--members {
+		&:active {
+			border: darken($color: $color-3, $amount: 10) solid 2.5px;
+			border-radius: 10px;
+		}
+	}
+
+	&--cancel {
+		color: white;
+		border-radius: 20px;
+        background-color: $color-3;
+        border: darken($color: $color-3, $amount: 2) solid 2px;
+        &:hover {
+			background-color: darken($color: $color-3, $amount: 5) !important;
+			box-shadow: 0 0px 0px 1px rgba(218, 217, 217, 0.2);
+			color: white;
+		}
+		.fa-youtube {
+			font-size: 1.1rem;
+			background-color: white;
+			border-radius: 25%;
+			path {
+				fill: red;
+			}
+		}
+        .fa-camera {
+            font-size: 1.1rem;
+			background-color: white;
+            padding: 0 2px;
+            border-radius: 25%;
+			path {
+				fill: red;
+			}
+		}
+
+	}
+    &--link {
+        color: $color-2;
+        background-color: white;
+        border: 2px solid $color-2;
+    }
+}

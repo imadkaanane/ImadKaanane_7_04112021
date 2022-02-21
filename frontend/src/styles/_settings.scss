@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+$font: "roboto", sans-serif;
+$border-radius: 3rem;
+$color-2: #011a3d;
+$color-3: #cf2e2e;
+$color-4: #252525;
+$color-5: #616161;
+
+*, .font {
+	font-family: $font;	
+	box-sizing: border-box;
+}
+
+body { 
+	color: $color-4;
+	background-image: url("../assets/Groupomania_background.png") ;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+    padding-right: 0 !important;
+}
+
+li {
+	list-style: none;
+}
+
+.card {
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.151);
+	
+}
